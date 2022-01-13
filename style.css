@@ -63,3 +63,17 @@ button:hover {
 table{
     margin: auto;
 }
+body>div>div{
+    width: 50%;
+}
+@media (max-width:600px)  {
+    body>div{
+        flex-direction: column;
+    }
+    body>div>div{
+        width: 100%;
+    }
+}
+h1{
+    margin: 1.5rem;
+}
