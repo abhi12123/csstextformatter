@@ -1,0 +1,65 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+input[type="number"] {
+  width: 40px;
+}
+
+code {
+  display: block;
+}
+
+textarea {
+  position: absolute;
+  z-index: -10;
+  left: -1000%;
+}
+body {
+  font-family: system-ui;
+  text-align: center;
+}
+
+button {
+  font-family: system-ui;
+  background: none;
+  outline: none;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 2px 8px;
+  cursor: pointer;
+  font-size: 18px;
+  width: 5rem;
+}
+button:hover {
+  font-weight: bolder;
+}
+
+#css-code {
+  margin: 0 5vw 5vw 5vw;
+  border: 1px solid gray;
+  padding: 20px;
+  border-radius: 10px;
+  background: lavender;
+  text-align: left;
+}
+
+#reset-all{
+    width: 8rem;
+}
+#copy-code{
+    margin: auto;
+}
+#sample-text{
+    text-align: left;
+    height: 200px;
+    overflow: hidden;
+    border: 1px solid gray;
+    padding: 10px;
+    margin: 20px;
+}
+table{
+    margin: auto;
+}

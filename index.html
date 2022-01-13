@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>CSS Text formatter</title>
+  </head>
+  <body>
+    <h1>CSS Text Formatter</h1>
+    <div style="display: flex; width: 100%">
+      <div style="width: 50%">
+        <table>
+          <tr>
+            <td><label for="font-size">font-size</label></td>
+            <td>
+              <input
+                name="font-size"
+                id="font-size"
+                value="16"
+                type="number"
+                step="1"
+                width="50"
+                onchange="handleValueChangeWithUnit(this)"
+                onkeyup="handleValueChangeWithUnit(this)"
+              />
+              <select
+                name="font-size"
+                id="unit-selector-font-size"
+                class="unit-selector"
+                onchange="handleUnitChange(this)"
+              ></select>
+            </td>
+            <td>
+              <button name="font-size" id="reset" onclick="handleReset(this)">
+                Reset
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <td><label for="color">color</label></td>
+            <td>
+              <input
+                type="color"
+                id="color"
+                name="color"
+                onchange="handleValueChange(this)"
+              />
+            </td>
+            <td>
+              <button name="color" onclick="handleReset(this)">Reset</button>
+            </td>
+          </tr>
+          <tr>
+            <td><label for="background-color">background-color</label></td>
+            <td>
+              <input
+                type="color"
+                id="background-color"
+                name="background-color"
+                onchange="handleValueChange(this)"
+              />
+            </td>
+            <td>
+              <button name="background-color" onclick="handleReset(this)">
+                Reset
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <td><label for="text-align">text-align</label></td>
+            <td>
+              <select
+                id="text-align"
+                name="text-align"
+                onchange="handleValueChange(this)"
+              >
+                <option>left</option>
+                <option>center</option>
+                <option>right</option>
+                <option>justify</option>
+              </select>
+            </td>
+            <td>
+              <button name="text-align" onclick="handleReset(this)">
+                Reset
+              </button>
+            </td>
+          </tr>
+          <!-- <tr>
+            <td><label for="vertical-align">vertical-align</label></td>
+            <td>
+              <select
+                id="vertical-align"
+                name="vertical-align"
+                onchange="handleValueChange(this)"
+              >
+                <option>baseline</option>
+                <option>text-top</option>
+                <option>text-bottom</option>
+                <option>sub</option>
+                <option>super</option>
+              </select>
+            </td>
+            <td>
+              <button name="vertical-align" onclick="handleReset(this)">
+                Reset
+              </button>
+            </td>
+          </tr> -->
+          <tr>
+            <td><label for="text-decoration">text-decoration</label></td>
+            <td>
+              <select
+                id="text-decoration"
+                name="text-decoration"
+                onchange="handleValueChange(this)"
+              >
+                <option>none</option>
+                <option>overline</option>
+                <option>line-through</option>
+                <option>underline</option>
+              </select>
+            </td>
+            <td>
+              <button name="text-decoration" onclick="handleReset(this)">
+                Reset
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <td><label for="text-transform">text-transform</label></td>
+            <td>
+              <select
+                id="text-transform"
+                name="text-transform"
+                onchange="handleValueChange(this)"
+              >
+                <option>none</option>
+                <option>uppercase</option>
+                <option>lowercase</option>
+                <option>capitalize</option>
+              </select>
+            </td>
+            <td>
+              <button name="text-transform" onclick="handleReset(this)">
+                Reset
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <td><label for="text-indent">text-indent</label></td>
+            <td>
+              <input
+                name="text-indent"
+                id="text-indent"
+                value="0"
+                type="number"
+                step="1"
+                width="50"
+                onchange="handleValueChangeWithUnit(this)"
+                onkeyup="handleValueChangeWithUnit(this)"
+              />
+              <select
+                name="text-indent"
+                id="unit-selector-text-indent"
+                class="unit-selector"
+                onchange="handleUnitChange(this)"
+              ></select>
+            </td>
+            <td>
+              <button name="text-indent" id="reset" onclick="handleReset(this)">
+                Reset
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <td><label for="letter-spacing">letter-spacing</label></td>
+            <td>
+              <input
+                name="letter-spacing"
+                id="letter-spacing"
+                value="0"
+                type="number"
+                step="1"
+                width="50"
+                onchange="handleValueChangeWithUnit(this)"
+                onkeyup="handleValueChangeWithUnit(this)"
+              />
+              <select
+                name="letter-spacing"
+                id="unit-selector-letter-spacing"
+                class="unit-selector"
+                onchange="handleUnitChange(this)"
+              ></select>
+            </td>
+            <td>
+              <button name="letter-spacing" id="reset" onclick="handleReset(this)">
+                Reset
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <td><label for="word-spacing">word-spacing</label></td>
+            <td>
+              <input
+                name="word-spacing"
+                id="word-spacing"
+                value="0"
+                type="number"
+                step="1"
+                width="50"
+                onchange="handleValueChangeWithUnit(this)"
+                onkeyup="handleValueChangeWithUnit(this)"
+              />
+              <select
+                name="word-spacing"
+                id="unit-selector-word-spacing"
+                class="unit-selector"
+                onchange="handleUnitChange(this)"
+              ></select>
+            </td>
+            <td>
+              <button name="word-spacing" id="reset" onclick="handleReset(this)">
+                Reset
+              </button>
+            </td>
+          </tr>
+        </table>
+        <button id="reset-all" onclick="handleResetAll()">Reset All</button>
+        <br />
+      </div>
+      <div style="width: 50%">
+        <label for="sample-text-length">Text length</label>
+        <input
+          for="sample-text-length"
+          type="range"
+          min="10"
+          max="440"
+          onchange="handleSampleTextLength(this)"
+          value="300"
+        />
+        <p id="sample-text" style="font-family: cursive"></p>
+        <code id="css-code"> </code>
+        <textarea id="text-area"></textarea>
+        <button id="copy-code">Copy</button>
+      </div>
+    </div>
+    <script type="text/javascript" src="./script.js"></script>
+  </body>
+</html>
