@@ -16,10 +16,10 @@ const defaultValues = {
   "text-align": "left",
   //   "vertical-align":"baseline",
   "text-decoration": "none",
-  "text-transform":"none",
-  "text-indent":0,
-  "letter-spacing":0,
-  "word-spacing":0,
+  "text-transform": "none",
+  "text-indent": 0,
+  "letter-spacing": 0,
+  "word-spacing": 0,
 };
 
 const properties = Object.keys(defaultValues);
@@ -72,16 +72,19 @@ copyBtn.onclick = () => {
 const handleValueChangeWithUnit = (e) => {
   sampleText.style[e.name] =
     e.value + document.getElementById("unit-selector-" + e.name).value;
+  document.querySelector(`button[name="${e.name}"]`).classList.remove("disabled");
   loadCssCode();
 };
 
 const handleUnitChange = (e) => {
   sampleText.style[e.name] = document.getElementById(e.name).value + e.value;
+  document.querySelector(`button[name="${e.name}"]`).classList.remove("disabled");
   loadCssCode();
 };
 
 const handleValueChange = (e) => {
   sampleText.style[e.name] = e.value;
+  document.querySelector(`button[name="${e.name}"]`).classList.remove("disabled");
   loadCssCode();
 };
 
@@ -91,6 +94,7 @@ const handleReset = (e) => {
   if (document.getElementById("unit-selector-" + e.name)) {
     document.getElementById("unit-selector-" + e.name).value = "px";
   }
+  document.querySelector(`button[name="${e.name}"]`).classList.add("disabled");
   loadCssCode();
 };
 
@@ -110,3 +114,6 @@ const handleResetAll = () => {
 const handleSampleTextLength = (e) => {
   sampleText.innerText = words.slice(0, e.value);
 };
+
+const x = document.querySelector('button[name="font-size"]');
+console.log(x);

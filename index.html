@@ -33,8 +33,13 @@
               ></select>
             </td>
             <td>
-              <button name="font-size" id="reset" onclick="handleReset(this)">
-                Reset
+              <button
+                name="font-size"
+                id="reset"
+                onclick="handleReset( this)"
+                class="disabled"
+              >
+                🗑️
               </button>
             </td>
           </tr>
@@ -49,7 +54,13 @@
               />
             </td>
             <td>
-              <button name="color" onclick="handleReset(this)">Reset</button>
+              <button
+                name="color"
+                onclick="handleReset( this)"
+                class="disabled"
+              >
+                🗑️
+              </button>
             </td>
           </tr>
           <tr>
@@ -63,8 +74,12 @@
               />
             </td>
             <td>
-              <button name="background-color" onclick="handleReset(this)">
-                Reset
+              <button
+                name="background-color"
+                onclick="handleReset( this)"
+                class="disabled"
+              >
+                🗑️
               </button>
             </td>
           </tr>
@@ -83,8 +98,12 @@
               </select>
             </td>
             <td>
-              <button name="text-align" onclick="handleReset(this)">
-                Reset
+              <button
+                name="text-align"
+                onclick="handleReset( this)"
+                class="disabled"
+              >
+                🗑️
               </button>
             </td>
           </tr>
@@ -104,7 +123,7 @@
               </select>
             </td>
             <td>
-              <button name="vertical-align" onclick="handleReset(this)">
+              <button name="vertical-align" onclick="handleReset( this)" class="disabled" >
                 Reset
               </button>
             </td>
@@ -124,8 +143,12 @@
               </select>
             </td>
             <td>
-              <button name="text-decoration" onclick="handleReset(this)">
-                Reset
+              <button
+                name="text-decoration"
+                onclick="handleReset( this)"
+                class="disabled"
+              >
+                🗑️
               </button>
             </td>
           </tr>
@@ -144,8 +167,12 @@
               </select>
             </td>
             <td>
-              <button name="text-transform" onclick="handleReset(this)">
-                Reset
+              <button
+                name="text-transform"
+                onclick="handleReset( this)"
+                class="disabled"
+              >
+                🗑️
               </button>
             </td>
           </tr>
@@ -170,8 +197,13 @@
               ></select>
             </td>
             <td>
-              <button name="text-indent" id="reset" onclick="handleReset(this)">
-                Reset
+              <button
+                name="text-indent"
+                id="reset"
+                onclick="handleReset( this)"
+                class="disabled"
+              >
+                🗑️
               </button>
             </td>
           </tr>
@@ -196,8 +228,13 @@
               ></select>
             </td>
             <td>
-              <button name="letter-spacing" id="reset" onclick="handleReset(this)">
-                Reset
+              <button
+                name="letter-spacing"
+                id="reset"
+                onclick="handleReset( this)"
+                class="disabled"
+              >
+                🗑️
               </button>
             </td>
           </tr>
@@ -222,13 +259,18 @@
               ></select>
             </td>
             <td>
-              <button name="word-spacing" id="reset" onclick="handleReset(this)">
-                Reset
+              <button
+                name="word-spacing"
+                id="reset"
+                onclick="handleReset( this)"
+                class="disabled"
+              >
+                🗑️
               </button>
             </td>
           </tr>
         </table>
-        <button id="reset-all" onclick="handleResetAll()">Reset All</button>
+        <button id="reset-all" onclick="handleResetAll()">Reset All 🗑️</button>
         <br />
       </div>
       <div>
@@ -242,9 +284,12 @@
           value="300"
         />
         <p id="sample-text"></p>
-        <code id="css-code"> </code>
+        <div style="position: relative">
+          <code id="css-code"> </code>
+          <button id="copy-code">📋</button>
+        </div>
+
         <textarea id="text-area"></textarea>
-        <button id="copy-code">Copy</button>
       </div>
     </div>
     <script type="text/javascript" src="./script.js"></script>

@@ -1,15 +1,40 @@
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
 }
 
 input[type="number"] {
   width: 40px;
+  border: none;
+  border-bottom: 1px solid black;
+  text-align: center;
+}
+
+select{
+  border: none;
+  border-bottom: 1px solid black;
+  text-align: center;
+  background: none;
+}
+
+.unit-selector {
+  border: 1px solid grey;
+  border-radius: 5px;
+  background: none;
+  text-align: center;
+}
+
+td {
+  border: 5px solid transparent;
 }
 
 code {
   display: block;
+  font-family: monospace;
 }
 
 textarea {
@@ -26,7 +51,7 @@ button {
   font-family: system-ui;
   background: none;
   outline: none;
-  border: 1px solid black;
+  border: none;
   border-radius: 5px;
   padding: 2px 8px;
   cursor: pointer;
@@ -46,34 +71,50 @@ button:hover {
   text-align: left;
 }
 
-#reset-all{
-    width: 8rem;
+#reset-all {
+  width: 8rem;
+  border: 1px black solid;
+  padding: 4px;
+  border-radius: 4px;
+  margin: 20px;
 }
-#copy-code{
-    margin: auto;
+
+#copy-code {
+  position: absolute;
+  top: 2px;
+  right: 5vw;
+  width: fit-content;
 }
-#sample-text{
-    text-align: left;
-    height: 200px;
-    overflow: hidden;
-    border: 1px solid gray;
-    padding: 10px;
-    margin: 20px;
+#sample-text {
+  text-align: left;
+  height: 200px;
+  overflow: hidden;
+  border: 1px solid gray;
+  padding: 10px;
+  margin: 20px;
 }
-table{
-    margin: auto;
+table {
+  margin: auto;
+  width: 80%;
 }
-body>div>div{
-    width: 50%;
+
+body > div > div {
+  width: 50%;
 }
-@media (max-width:600px)  {
-    body>div{
-        flex-direction: column;
-    }
-    body>div>div{
-        width: 100%;
-    }
+@media (max-width: 600px) {
+  body > div {
+    flex-direction: column;
+  }
+  body > div > div {
+    width: 100%;
+  }
 }
-h1{
-    margin: 1.5rem;
+h1 {
+  margin: 1.5rem;
+  font-size: clamp(35px, 4vw, 45px);
+}
+
+.disabled {
+  opacity: 0.3;
+  pointer-events: none;
 }
