@@ -14,7 +14,7 @@ input[type="number"] {
   text-align: center;
 }
 
-select{
+select {
   border: none;
   border-bottom: 1px solid black;
   text-align: center;
@@ -117,4 +117,15 @@ h1 {
 .disabled {
   opacity: 0.3;
   pointer-events: none;
+}
+
+#code-copied {
+  width: fit-content;
+  right: calc(5vw + 30px);
+  top: 5px;
+  font-size: 14px;
+  position: absolute;
+  background: #ffffa7;
+  border-radius: 5px;
+  padding: 4px;
 }

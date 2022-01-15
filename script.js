@@ -20,6 +20,8 @@ const defaultValues = {
   "text-indent": 0,
   "letter-spacing": 0,
   "word-spacing": 0,
+  "font-style":'normal',
+  "font-variant":"normal",
 };
 
 const properties = Object.keys(defaultValues);
@@ -42,7 +44,13 @@ const loadCssCode = () => {
     }
   });
   //saving css code
-  cssCode.innerText = newCssCode;
+  if(!newCssCode){
+    cssCode.innerText = 'no styles added yet';
+    copyBtn.classList.add("disabled");
+  }else{
+    copyBtn.classList.remove("disabled");
+    cssCode.innerText = newCssCode;
+  }
 };
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -67,6 +75,10 @@ copyBtn.onclick = () => {
   emptyArea.innerHTML = codeToBeCopied;
   emptyArea.select();
   document.execCommand("copy");
+  document.getElementById('code-copied').style.display = 'inherit'
+  window.setTimeout(()=>{
+    document.getElementById('code-copied').style.display = 'none'
+  },2000)
 };
 
 const handleValueChangeWithUnit = (e) => {
@@ -101,6 +113,7 @@ const handleReset = (e) => {
 const handleResetAll = () => {
   properties.map((property) => {
     sampleText.style.removeProperty(property);
+    document.querySelector(`button[name="${property}"]`).classList.add("disabled");
     if (document.getElementById(property)) {
       document.getElementById(property).value = defaultValues[property];
     }
@@ -114,6 +127,3 @@ const handleResetAll = () => {
 const handleSampleTextLength = (e) => {
   sampleText.innerText = words.slice(0, e.value);
 };
-
-const x = document.querySelector('button[name="font-size"]');
-console.log(x);

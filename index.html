@@ -269,6 +269,53 @@
               </button>
             </td>
           </tr>
+          <tr>
+            <td><label for="font-style">font-style</label></td>
+            <td>
+              <select
+                id="font-style"
+                name="font-style"
+                onchange="handleValueChange(this)"
+              >
+                <option>normal</option>
+                <option>italic</option>
+                <option>oblique</option>
+              </select>
+            </td>
+            <td>
+              <button
+                name="font-style"
+                id="reset"
+                onclick="handleReset( this)"
+                class="disabled"
+              >
+                🗑️
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <td><label for="font-variant">font-variant</label></td>
+            <td>
+              <select
+                id="font-variant"
+                name="font-variant"
+                onchange="handleValueChange(this)"
+              >
+                <option>normal</option>
+                <option>small-caps</option>
+              </select>
+            </td>
+            <td>
+              <button
+                name="font-variant"
+                id="reset"
+                onclick="handleReset( this)"
+                class="disabled"
+              >
+                🗑️
+              </button>
+            </td>
+          </tr>
         </table>
         <button id="reset-all" onclick="handleResetAll()">Reset All 🗑️</button>
         <br />
@@ -285,8 +332,9 @@
         />
         <p id="sample-text"></p>
         <div style="position: relative">
-          <code id="css-code"> </code>
-          <button id="copy-code">📋</button>
+          <code id="css-code"></code>
+          <p id='code-copied' style="display: none;">Code Copied</p>
+          <button id="copy-code" class="disabled">📋</button>
         </div>
 
         <textarea id="text-area"></textarea>
