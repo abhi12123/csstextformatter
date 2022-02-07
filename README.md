@@ -1,8 +1,6 @@
-# CSSTextFormatter
+# CSSTextFormatter-v1
 
-CssTextFormatter is a tool which can be used to generate CSS from text properties. Which can be directly copied to the clipboard.
-It is created using Vanilla Javascript. It is a front end web app which is light weight, fast and secure.
+## Version 1 of the [CssTextFormatter](https://csstextformatter.abhinavvp.com/) web application.  
+version 1 was created with Vanilla Js without ani API calls with limited options to check its viability.
 
-You can simply clone the repo and use it.
-
-Presently hosted at https://apps.abhinavvp.com/csstextformatter/
+Version 1 is live [here](https://abhi12123.github.io/csstextformatter-v1/) :)
